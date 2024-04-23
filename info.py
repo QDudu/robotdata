@@ -5,7 +5,7 @@ from naoqi import ALProxy
 def main(robotIP, PORT=9559):
     motionProxy = ALProxy("ALMotion", robotIP, PORT)
 
-    # Example showing how to get the robot config
+    # 获取当前连接到的机器人的配置信息
     robotConfig = motionProxy.getRobotConfig()
     for i in range(len(robotConfig[0])):
         print robotConfig[0][i], ": ", robotConfig[1][i]
