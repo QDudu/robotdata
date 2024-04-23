@@ -3,19 +3,27 @@ import os
 import sys
 import time
 from data_recording import recordData
-
 from naoqi import ALProxy
+
 nao_ip="127.0.0.1"
 
 def main(robotIP, behaviorName):
     # Create proxy to ALBehaviorManager
     managerProxy = ALProxy("ALBehaviorManager", robotIP, 9559)
-
-    managerProxy.startBehavior(behaviorName)
+    '''
+    语句顺序为：
+    先控制机器人动作程序执行
+    再读取读取数据
+    这样才可以在行为发生的同时记录数据
+    '''
+    managerProxy.startBehavior(behaviorName) #行为程序执行！！
     data = recordData(nao_ip)
+    
     #getBehaviors(managerProxy)
     #launchAndStopBehavior(managerProxy, behaviorName)
     #defaultBehaviors(managerProxy, behaviorName)
+    # 以上三个函数是文档里给出的实例，用来控制行为的开始，暂停，以及将行为加入默认行为列表
+    # startBehavior就可以完整执行一遍整个动作
 
     output = os.path.abspath("record.csv")
 
@@ -102,6 +110,5 @@ if (len(sys.argv) < 3):
         print "Usage python albehaviormanager_example.py robotIP behaviorName"
         sys.exit(1)
     '''
-
     #main(sys.argv[1], sys.argv[2])
     main("127.0.0.1", "behavior_1")
