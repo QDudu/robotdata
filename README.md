@@ -1,5 +1,5 @@
 # robotdata
-1. Python2.7-win32导入binary版本的naoqi SDKs包，即可用ALProxy对象可以在choregraphe外部，用python连接虚拟机器人并实现机器人动作编程    
+1. Python2.7-win32导入binary版本的naoqi SDKs包，即可用ALProxy对象可以在choregraphe外部，用python连接虚拟机器人并实现机器人动作编程  
 2. choregraphe可以在新建项目中：添加python box，在自动给出类的定义的基础上添加onstart和onstopped函数进行动作定义；或者用box库中已有的动作进行组合  
 以上两种办法是分开的，都可独立完成驱动nao，但choregraphe可视化更直观  
   
@@ -21,22 +21,33 @@ setup过程中选择将python2.7.18配置到PATH环境变量
 验证：cmd->python27->import naoqi  
 opencv：pip install opencv-python==4.2.0.32  
 
-# Method 1 Python编程Nao
+## Method 1  Python编程Nao
 1. test.py:  
    用默认IP和端口地址实现机器人连接；定义一个控制机器人动作的ALProxy对象  
    运行main.py可检查与机器人是否连接成功(前提是Webots按上述方法安装并打开)  
 2. info.py:  
    输出当前连接到的机器人的配置信息：类型与版本
-   此安装方法对应的是机器人：naoH25
+   此安装方法对应的是机器人：naoH25  
    [body_type](	http://doc.aldebaran.com/2-1/family/body_type.html)
-4. pose.py:  
+3. pose.py:  
+   ```
    motionProxy  = ALProxy("ALMotion", robotIP, PORT)  
-   postureProxy = ALProxy("ALRobotPosture", robotIP, PORT)  
-   控制nao的动作以及目标姿势，驱动机器人
-   [keywords](http://doc.aldebaran.com/2-1/family/nao_h25/joints_h25.html)
-   [ALRobotPosture](http://doc.aldebaran.com/2-1/naoqi/motion/alrobotposture.html#alrobotposture)
+   postureProxy = ALProxy("ALRobotPosture", robotIP, PORT)
+   ```
+   控制nao的动作以及目标姿势，驱动机器人  
+   [keywords](http://doc.aldebaran.com/2-1/family/nao_h25/joints_h25.html)  
+   [ALRobotPosture](http://doc.aldebaran.com/2-1/naoqi/motion/alrobotposture.html#alrobotposture)  
    [ALMotion](	http://doc.aldebaran.com/2-1/naoqi/motion/almotion-api.html)
-   
-   
+5. data_recording.py:  
+   两个任务并行（非阻塞调用）：  
+   a. recordData函数读取ALMemory的记录数据，读取时间间隔为0.05s   
+   b. motion驱动机器人的头部转动，设定转动角度范围  
+   最后将读取数据输出到.csv表格中  
+   [ALMemory](http://doc.aldebaran.com/2-1/naoqi/core/almemory.html)  
+
+## Method 2 Choregraphe -> behaviour
+在choregraphe保存的设计好的项目文件中有behaviour文件夹下的.xar或.xml文件里面包含：  
+1. python动作程序  
+2. 控制机器人关节动作的一系列关键帧的的帧序号以及值（弧度）  
 
 
