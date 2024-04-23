@@ -18,4 +18,10 @@
 setup过程中选择将python2.7.18配置到PATH环境变量  
 下载Nao机器人的SDK: pynaoqi-python2.7-2.1.4.13-win32-vs2010  
 解压后将：pynaoqi-python2.7-2.1.4.13-win32-vs2010\ 添加到用户变量中  
-验证：cmd->python27-
+验证：cmd->python27->import naoqi  
+opencv：pip install opencv-python==4.2.0.32  
+
+# Method 1 Python编程Nao
+## main.py
+
+
