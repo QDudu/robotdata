@@ -21,7 +21,7 @@ setup过程中选择将python2.7.18配置到PATH环境变量
 验证：cmd->python27->import naoqi  
 opencv：pip install opencv-python==4.2.0.32  
 
-## Method 1  Python编程Nao
+## Method 1  NAO Python API
 [ALProxy](http://doc.aldebaran.com/2-1/naoqi/index.html)  
 1. test.py:  
    用默认IP和端口地址实现机器人连接；定义一个控制机器人动作的ALProxy对象  
@@ -45,8 +45,11 @@ opencv：pip install opencv-python==4.2.0.32
    b. motion驱动机器人的头部转动，设定转动角度范围  
    最后将读取数据输出到.csv表格中  
    [ALMemory](http://doc.aldebaran.com/2-1/naoqi/core/almemory.html)  
+## Method 2 Choregraphe+Naoqi
+1. 在choregraphe定义好一个项目动作后，将这一机器人程序发送到机器人
 
-## Method 2 Choregraphe -> behaviour
+
+## Method 3 Choregraphe -> behaviour
 在choregraphe保存的设计好的项目文件中有behaviour文件夹下的.xar或.xml文件里面包含：  
 1. python动作程序  
 2. 控制机器人关节动作的一系列关键帧的的帧序号以及值（弧度）  
