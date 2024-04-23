@@ -22,6 +22,7 @@ setup过程中选择将python2.7.18配置到PATH环境变量
 opencv：pip install opencv-python==4.2.0.32  
 
 ## Method 1  Python编程Nao
+[ALProxy](http://doc.aldebaran.com/2-1/naoqi/index.html)  
 1. test.py:  
    用默认IP和端口地址实现机器人连接；定义一个控制机器人动作的ALProxy对象  
    运行main.py可检查与机器人是否连接成功(前提是Webots按上述方法安装并打开)  
