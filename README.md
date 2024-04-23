@@ -45,7 +45,7 @@ opencv：pip install opencv-python==4.2.0.32
    b. motion驱动机器人的头部转动，设定转动角度范围  
    最后将读取数据输出到.csv表格中  
    [ALMemory](http://doc.aldebaran.com/2-1/naoqi/core/almemory.html)  
-## Method 2 Choregraphe+Naoqi
+## Method 2 Choregraphe+Naoqi ！！
 1. 在choregraphe定义好一个项目动作后，将这一机器人程序发送至机器人  
    发送行为文件成功，在choregraphe机器人应用程序面板处可以看到当前程序下行为的名称：此例中为"behavior_1"
 2. manage.py  
