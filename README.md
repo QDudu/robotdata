@@ -5,11 +5,17 @@
   
 获取机器人动作数据需要在本地安装webots,choregraphe,配置naoqi环境(python)
 ## webots
-为能与choregraphe连接，应选择webots版本8.x,安装Webots-8.6.2
-安装后打开登入：随便填一个电子邮箱，密码是:webots
-(修改语言)登入后：Tools→Preferences→Chinese
-打开虚拟nao机器人：Files->Open Sample World->robots->aldebaran->nao.wbt
+为能与choregraphe连接，应选择webots版本8.x,安装Webots-8.6.2  
+安装后打开登入：随便填一个电子邮箱，密码是:webots  
+(修改语言)登入后：Tools→Preferences→Chinese  
+打开虚拟nao机器人：Files->Open Sample World->robots->aldebaran->nao.wbt  
 ## choregraphy
-对应版本：choregraphe-suite-2.1.4.13-win32-setup
-使用固定端口9559 或 固定IP：127.0.0.1 连接webots中的nao机器人
-注意：本地User后的用户名不能有中文，不然无法连接虚拟机器人
+安装：choregraphe-suite-2.1.4.13-win32-setup  
+使用固定端口9559 或 固定IP：127.0.0.1 连接webots中的nao机器人  
+注意：本地User后的用户名不能有中文，不然无法连接虚拟机器人  
+## 配置naoqi环境
+安装：python-2.7.18-32位(Windows x86 MSL安装程序)
+setup过程中选择将python2.7.18配置到PATH环境变量  
+下载Nao机器人的SDK: pynaoqi-python2.7-2.1.4.13-win32-vs2010  
+解压后将：pynaoqi-python2.7-2.1.4.13-win32-vs2010\ 添加到用户变量中  
+验证：cmd->python27-
