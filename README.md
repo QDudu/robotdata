@@ -46,9 +46,12 @@ opencv：pip install opencv-python==4.2.0.32
    最后将读取数据输出到.csv表格中  
    [ALMemory](http://doc.aldebaran.com/2-1/naoqi/core/almemory.html)  
 ## Method 2 Choregraphe+Naoqi
-1. 在choregraphe定义好一个项目动作后，将这一机器人程序发送到机器人
-
-
+1. 在choregraphe定义好一个项目动作后，将这一机器人程序发送至机器人  
+   发送行为文件成功，在choregraphe机器人应用程序面板处可以看到当前程序下行为的名称：此例中为"behavior_1"
+2. manage.py  
+   调用ALBehaviorManager,控制机器人程序的动作，可以控制开始、暂停、持续时间、默认动作等  
+   [APLBehaviorManager](http://doc.aldebaran.com/2-1/naoqi/core/albehaviormanager.html)  
+   调用Method 1中的recordData函数，获取关节运动信息  
 ## Method 3 Choregraphe -> behaviour
 在choregraphe保存的设计好的项目文件中有behaviour文件夹下的.xar或.xml文件里面包含：  
 1. python动作程序  
