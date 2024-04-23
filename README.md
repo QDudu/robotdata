@@ -1,5 +1,5 @@
 # robotdata
-1. Python2.7-win32导入binary版本的naoqi SDKs包，即可用ALProxy对象可以在choregraphe外部，用python连接虚拟机器人并实现机器人动作编程  
+1. Python2.7-win32导入binary版本的naoqi SDKs包，用ALProxy对象接口，而不使用choregraphe，python编程直接连接虚拟机器人并实现机器人动作控制  
 2. choregraphe可以在新建项目中：添加python box，在自动给出类的定义的基础上添加onstart和onstopped函数进行动作定义；或者用box库中已有的动作进行组合  
 以上两种办法是分开的，都可独立完成驱动nao，但choregraphe可视化更直观  
   
