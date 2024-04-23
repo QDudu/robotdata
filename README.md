@@ -27,10 +27,16 @@ opencv：pip install opencv-python==4.2.0.32
    运行main.py可检查与机器人是否连接成功(前提是Webots按上述方法安装并打开)  
 2. info.py:  
    输出当前连接到的机器人的配置信息：类型与版本
-3. pose.py:  
-   motionProxy  = ALProxy("ALMotion", robotIP, PORT)
-   postureProxy = ALProxy("ALRobotPosture", robotIP, PORT)
-   控制nao的动作以及目标姿势，驱动机器人  
+   此安装方法对应的是机器人：naoH25
+   [body_type](	http://doc.aldebaran.com/2-1/family/body_type.html)
+4. pose.py:  
+   motionProxy  = ALProxy("ALMotion", robotIP, PORT)  
+   postureProxy = ALProxy("ALRobotPosture", robotIP, PORT)  
+   控制nao的动作以及目标姿势，驱动机器人
+   [keywords](http://doc.aldebaran.com/2-1/family/nao_h25/joints_h25.html)
+   [ALRobotPosture](http://doc.aldebaran.com/2-1/naoqi/motion/alrobotposture.html#alrobotposture)
+   [ALMotion](	http://doc.aldebaran.com/2-1/naoqi/motion/almotion-api.html)
+   
    
 
 
