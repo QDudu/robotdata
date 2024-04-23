@@ -17,12 +17,12 @@ from naoqi import ALProxy
 
 def recordData(nao_ip):
     """ 
-    Record the data from ALMemory.
-    Returns a matrix of values
+    从ALMemory中记录数据
+    返回读取到值的数组
     """
     print "Recording data ..."
    
-    # 用ALProxy类的ALMemory创建对象
+    # 用ALProxy类的ALMemory创建用于存储信息的对象
     memory = ALProxy("ALMemory", nao_ip, 9559)
     
     data = list()
