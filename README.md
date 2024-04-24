@@ -9,7 +9,7 @@
 安装后打开登入：随便填一个电子邮箱，密码是:webots  
 (修改语言)登入后：Tools→Preferences→Chinese  
 打开虚拟nao机器人：Files->Open Sample World->robots->aldebaran->nao.wbt  
-## choregraphy
+## choregraphe
 安装：choregraphe-suite-2.1.4.13-win32-setup  
 使用固定端口9559 或 固定IP：127.0.0.1 连接webots中的nao机器人  
 注意：本地User后的用户名不能有中文，不然无法连接虚拟机器人  
@@ -25,7 +25,7 @@ opencv：pip install opencv-python==4.2.0.32
 [ALProxy](http://doc.aldebaran.com/2-1/naoqi/index.html)  
 1. test.py:  
    用默认IP和端口地址实现机器人连接；定义一个控制机器人动作的ALProxy对象  
-   运行main.py可检查与机器人是否连接成功(前提是Webots按上述方法安装并打开)  
+   运行test.py可检查与机器人是否连接成功(前提是Webots按上述方法安装并打开nao)  
 2. info.py:  
    输出当前连接到的机器人的配置信息：类型与版本
    此安装方法对应的是机器人：naoH25  
