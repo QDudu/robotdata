@@ -13,17 +13,17 @@ def main(robotIP, behaviorName):
     '''
     语句顺序为：
     先控制机器人动作程序执行
-    再读取读取数据
+    再读取数据
     这样才可以在行为发生的同时记录数据
     '''
     managerProxy.startBehavior(behaviorName) #行为程序执行！！
-    data = recordData(nao_ip)
+    data = recordData(nao_ip) #读取数据！
     
     #getBehaviors(managerProxy)
     #launchAndStopBehavior(managerProxy, behaviorName)
     #defaultBehaviors(managerProxy, behaviorName)
     # 以上三个函数是文档里给出的实例，用来控制行为的开始，暂停，以及将行为加入默认行为列表
-    # startBehavior就可以完整执行一遍整个动作
+    # startBehavior就可以完整执行一遍整个动作，此程序可以不用以上三个函数
 
     output = os.path.abspath("record.csv")
 
