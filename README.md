@@ -52,8 +52,8 @@ opencv：pip install opencv-python==4.2.0.32
    调用ALBehaviorManager,控制机器人程序的动作，可以控制开始、暂停、持续时间、默认动作等  
    [APLBehaviorManager](http://doc.aldebaran.com/2-1/naoqi/core/albehaviormanager.html)  
    调用Method 1中的recordData函数，获取关节运动信息  
-## Method 3 Choregraphe -> behaviour
-在choregraphe保存的设计好的项目文件中有behaviour文件夹下的.xar或.xml文件里面包含：  
+## Method 3 Choregraphe -> behavior
+在choregraphe保存的设计好的项目文件中有behavior文件夹下的.xar或.xml文件里面包含：  
 1. python动作程序  
 2. 控制机器人关节动作的一系列关键帧的的帧序号以及值（弧度）  
 
